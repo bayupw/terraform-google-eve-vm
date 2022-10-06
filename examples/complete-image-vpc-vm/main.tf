@@ -12,7 +12,7 @@ output "eve-gcp-image" {
 }
 
 module "eve-vm" {
-  source = "bayupw/google/eve-vm/google"
+  source = "bayupw/eve-vm/google"
   version = "1.0.0"
 
   project_id = "my-project-id"
