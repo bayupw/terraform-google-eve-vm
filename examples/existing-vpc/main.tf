@@ -1,5 +1,5 @@
 module "eve-vm" {
-  source  = "bayupw/google/terraform-google-eve-vm/google"
+  source  = "bayupw/google/eve-vm/google"
   version = "1.0.0"
 
   project_id   = "my-project-id"
