@@ -14,7 +14,6 @@ variable "random_string_length" {
 variable "project_id" {
   description = "The ID of the project in which the resource belongs."
   type        = string
-  default     = "bwibowo-01"
 }
 
 variable "create_vpc" {
