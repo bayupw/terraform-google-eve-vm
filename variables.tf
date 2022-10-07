@@ -70,6 +70,12 @@ variable "machine_type" {
   default     = "n2-standard-4"
 }
 
+variable "disk_size" {
+  description = "Boot disk size."
+  type        = number
+  default     = 100
+}
+
 variable "vm_name" {
   description = "GCP VM name."
   type        = string

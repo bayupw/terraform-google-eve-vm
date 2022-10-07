@@ -4,6 +4,6 @@ output "eve_vm_public_ip" {
 }
 
 output "eve_vm_name" {
-  description = "VM public IP."
+  description = "VM name."
   value       = google_compute_instance.this.name
 }
