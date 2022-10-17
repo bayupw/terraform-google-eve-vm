@@ -88,7 +88,7 @@ resource "google_compute_instance" "this" {
   boot_disk {
     initialize_params {
       image = var.boot_disk
-      size = var.disk_size
+      size  = var.disk_size
     }
   }
 
@@ -108,10 +108,12 @@ resource "google_compute_instance" "this" {
   advanced_machine_features {
     enable_nested_virtualization = true
   }
+
+  can_ip_forward = true
 }
 
 locals {
-  iap_range = ["35.235.240.0/20"] # https://cloud.google.com/iap/docs/tcp-by-host
-  network = var.create_vpc ? google_compute_network.this[0].name : var.network_name
+  iap_range  = ["35.235.240.0/20"] # https://cloud.google.com/iap/docs/tcp-by-host
+  network    = var.create_vpc ? google_compute_network.this[0].name : var.network_name
   subnetwork = var.create_vpc ? google_compute_subnetwork.this[0].name : var.subnet_name
 }
